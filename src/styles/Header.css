@@ -162,7 +162,8 @@ nav{
     border-radius: 6px; /* Add border radius for rounded corners */
     z-index: 1000; /* Ensure it stays on top */
     left: 0;
-    right: 0;
+    align-items: start;
+    text-align: start;
   }
 
   .nav-link {

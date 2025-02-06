@@ -9,14 +9,13 @@ const Home = () => {
       <div className="cover-image-container">
         <img src={coverImage} alt="Cover" className="cover-image" />
         <div className="cover-content">
-          <h1>Welcome to Vaavix Digital</h1>
-          <p>Your one-stop solution for digital excellence.</p>
-        </div>
-
-        <img src={coverImage} alt="Cover" className="cover-image" />
-        <div className="cover-content">
-          <h1>Welcome to Vaavix Digital</h1>
-          <p>Your one-stop solution for digital excellence.</p>
+          <h1> Innovate, Engage, 
+          Succeed</h1>
+          <p>We deliver cutting-edge software solutions tailored to your 
+          business needs.</p>
+          <button className="explore-services">
+            Explore Our Services
+          </button>
         </div>
       </div>
       

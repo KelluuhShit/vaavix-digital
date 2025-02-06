@@ -1,5 +1,4 @@
 .home-container {
-    text-align: center;
     color: white;
     height: 100vh;
     overflow: hidden;
@@ -22,18 +21,59 @@
   
   .cover-content {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 5%;
     color: white;
-    text-align: center;
+    max-width: 600px;
   }
   
   .cover-content h1 {
-    font-size: 3em;
+    font-size: 4em;
     margin: 0;
   }
   
   .cover-content p {
     font-size: 1.5em;
+  }
+
+  .explore-services{
+    background-color: red;
+    padding: 20px 50px;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    font-size: 24px;
+  }
+
+  @media (max-width: 768px) {
+    .cover-image-container{
+        height: 60%;
+    }
+
+    .cover-content {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        color: white;
+        max-width: 600px;
+      }
+
+    .cover-content h1 {
+        font-size: 2em;
+        margin: 0;
+      }
+
+      .cover-content p {
+        font-size: 1.5em;
+      }
+
+      .explore-services{
+        background-color: red;
+        padding: 15px 30px;
+        border: none;
+        color: white;
+        border-radius: 6px;
+        font-size: 18px;
+      }
+   
   }
