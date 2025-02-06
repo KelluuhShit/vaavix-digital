@@ -16,7 +16,7 @@ const SignInScreen = () => {
     e.preventDefault();
     // Add your login logic here
     if (email && password) {
-      navigate("/home"); // Navigate to the home screen
+      navigate("/"); // Navigate to the home screen
     } else {
       alert("Please enter both email and password");
     }

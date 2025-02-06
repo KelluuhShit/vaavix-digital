@@ -1,13 +1,13 @@
 .home-container {
     color: white;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
   }
   
   .cover-image-container {
     position: relative;
     width: 100%;
-    height: 100%; /* Fullscreen height */
+    height: 85%; /* Fullscreen height */
   }
   
   .cover-image {
@@ -17,6 +17,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    
   }
   
   .cover-content {
@@ -45,9 +46,98 @@
     font-size: 24px;
   }
 
+  .serviceConatiner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .services-section {
+    padding: 20px;
+    color: black;
+    text-align: center;
+    width: 70%;
+  }
+  
+  .services-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    font-weight: lighter;
+    color: #519cad;
+  }
+
+  .services-section h3 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+  
+  
+  .services-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+
+  .services-cards {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 20px;
+    justify-items: center; /* Align items to the start */
+    padding: 2em;
+  }
+  
+  .service-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 330px;
+    height: 350px;
+    text-align: start;
+    color: black;
+    
+  }
+
+  .service-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .service-card h4 {
+    font-size: 1.5em;
+    margin: 15px 0;
+  }
+  
+  .service-card p {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+
+  .explore-service-btn {
+    background-color: #519cad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .explore-service-btn:hover {
+    background-color: #417a8a;
+  }
+
   @media (max-width: 768px) {
     .cover-image-container{
         height: 60%;
+        
+    }
+
+    .cover-image{
+        border-radius: 0px 0px 30px 30px;
     }
 
     .cover-content {
@@ -56,6 +146,7 @@
         left: 5%;
         color: white;
         max-width: 600px;
+        
       }
 
     .cover-content h1 {
@@ -74,6 +165,22 @@
         color: white;
         border-radius: 6px;
         font-size: 18px;
+      }
+
+      .services-section {
+        padding: 20px;
+        color: black;
+        text-align: center;
+        width: 80%;
+      }
+
+      .services-cards {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
       }
    
   }
