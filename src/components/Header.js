@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Header.css"; // Import the CSS file
+import logo from "../assets/Vav_Logo.png";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -13,19 +14,21 @@ const Header = () => {
   return (
     <header className="header">
       {/* Logo */}
-      <div className="logo">
-        <Link to="/">Vaavix Digital</Link>
-      </div>
+        <div className="logo">
+          <Link to="/home">
+            <img src={logo} alt="Vaavix Digital" className="logo-image" />
+          </Link>
+        </div>
 
-      {/* Hamburger Icon for Mobile */}
-      <div className="menu-icon" onClick={toggleMenu}>
-        <i className="fa-solid fa-bars-staggered"></i>
-      </div>
+        {/* Hamburger Icon for Mobile */}
+        <div className="menu-icon" onClick={toggleMenu}>
+          <i className="fa-solid fa-bars-staggered"></i>
+        </div>
 
       {/* Navigation */}
       <nav className={`nav ${isMenuOpen ? "nav-open" : ""}`}>
-        <Link to="/home" className="nav-link">Home</Link>
-        <Link to="/about" className="nav-link">About</Link>
+        <Link to="/home" className="nav-link">HOME</Link>
+        
 
         {/* Services Dropdown */}
         <div
@@ -33,7 +36,7 @@ const Header = () => {
           onMouseEnter={() => setIsDropdownOpen(true)}
           onMouseLeave={() => setIsDropdownOpen(false)}
         >
-          <button className="dropdown-btn">Services ▼</button>
+          <button className="dropdown-btn">SERVICE ▼</button>
 
           {/* Dropdown Menu */}
           {isDropdownOpen && (
@@ -54,12 +57,14 @@ const Header = () => {
           )}
         </div>
 
-        <Link to="/contact" className="nav-link">Contact</Link>
+        
+        <Link to="/about" className="nav-link">ABOUT</Link>
+        <Link to="/contact" className="nav-link">CONTACT US</Link>
       </nav>
 
       {/* Profile Section */}
-      <div className="login-section">
-        <Link to="/" className="login-btn">Log In</Link>
+      <div className="lets-talk">
+        <Link to="/home" className="talk-btn">Lets Talk</Link>
       </div>
     </header>
   );

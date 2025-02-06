@@ -1,127 +1,180 @@
 .header {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  height: 50px;
+  border: solid 1px;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+  margin-left: 7em;
+}
+
+.nav-link {
+  margin: 0 10px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  color: black;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 200px;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+}
+
+.dropdown-menu li a {
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.logo{
+  position: absolute;
+  left: 0;
+  margin-left: 5em;
+}
+.logo-image{
+  width: 140px;
+  height: 140px;
+  margin-left: 1em;
+}
+
+.menu-icon{
+  display: none;
+}
+
+.lets-talk {
+  display: flex;
+  align-items: center;
+}
+
+.talk-btn {
+  background-color: red; /* Set background color to red */
+  color: white; /* Set text color to white */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.talk-btn:hover {
+  background-color: darkred; /* Darken the background color on hover */
+}
+
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+
+  .header{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    position: relative;
   }
-  
-  .logo a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
+
   .menu-icon {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  .nav {
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-link {
-    margin: 0 10px;
-    color: white;
-    text-decoration: none;
-  }
-  
-  .nav-link:hover {
-    text-decoration: underline;
-  }
-  
-  .dropdown {
-    position: relative;
-  }
-  
-  .dropdown-btn {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .dropdown-menu {
+    display: block;
     position: absolute;
-    top: 100%;
+    right: 20px;
+    font-size: 1.7em;
+    color: red;
+  }
+
+  .logo{
+    position: absolute;
     left: 0;
-    background-color: white;
-    color: black;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    margin-left: 1em;
   }
-  
-  .dropdown-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+
+  .logo-image{
+    width: 100px;
+    height: 100px;
+    margin-left: 2em;
+    padding-top: 10px;
   }
-  
-  .dropdown-menu li {
-    padding: 8px 16px;
+
+  .lets-talk{
+    display: none;
   }
-  
-  .dropdown-menu li a {
-    color: black;
-    text-decoration: none;
+
+  .nav, .login-section {
+    display: none;
   }
-  
-  .dropdown-menu li a:hover {
-    background-color: #ddd;
-  }
-  
-  .login-section {
+
+  .nav.nav-open {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: white; /* Use the primary color from SignInScreen.css */
+    position: absolute;
+    top: 60px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+    padding: 20px; /* Add padding for better spacing */
+    border-radius: 6px; /* Add border radius for rounded corners */
+    z-index: 1000; /* Ensure it stays on top */
+    left: 0;
+    right: 0;
   }
-  
-  .login-btn {
-    color: white;
-    text-decoration: none;
-    margin-left: 10px;
+
+  .nav-link {
+    margin: 10px 0;
   }
-  
-  .login-btn:hover {
-    text-decoration: underline;
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
   }
-  
-  /* Media Queries for Responsiveness */
-  @media (max-width: 768px) {
-    .menu-icon {
-      display: block;
-    }
-  
-    .nav {
-      display: none;
-      flex-direction: column;
-      width: 100%;
-      background-color: #333;
-      position: absolute;
-      top: 60px;
-      left: 0;
-    }
-  
-    .nav.nav-open {
-      display: flex;
-    }
-  
-    .nav-link {
-      margin: 10px 0;
-    }
-  
-    .dropdown-menu {
-      position: static;
-      box-shadow: none;
-    }
-  
-    .dropdown-menu li a:hover {
-      background-color: transparent;
-    }
+
+  .dropdown-menu li a:hover {
+    background-color: transparent;
   }
+}

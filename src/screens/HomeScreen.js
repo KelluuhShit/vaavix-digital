@@ -1,15 +1,30 @@
 import React from "react";
 import Header from "../components/Header";
-
+import coverImage from "../assets/signinbg.jpeg"; // Import the cover image
+import "../styles/HomeScreen.css";
 const Home = () => {
   return (
-    <div>
+    <div className="home-container">
       <Header />
-      <main>
-        <h1>Welcome to Vaavix Digital</h1>
-        <p>Your one-stop solution for digital excellence.</p>
-      </main>
+      <div className="cover-image-container">
+        <img src={coverImage} alt="Cover" className="cover-image" />
+        <div className="cover-content">
+          <h1>Welcome to Vaavix Digital</h1>
+          <p>Your one-stop solution for digital excellence.</p>
+        </div>
+
+        <img src={coverImage} alt="Cover" className="cover-image" />
+        <div className="cover-content">
+          <h1>Welcome to Vaavix Digital</h1>
+          <p>Your one-stop solution for digital excellence.</p>
+        </div>
+      </div>
+      
+
+      
     </div>
+
+    
   );
 };
 
